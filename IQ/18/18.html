@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新页面</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .bg-container {
+            background-image: url('12.png'); /* 替换为您的背景图片 */
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .btn {
+            background-color: #f36adf;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+<div class="bg-container">
+    <div class="content">
+        <h1>هل عمرك ثمانية عشر عاما؟</h1>
+        <div class="button-container">
+            <a class="btn mainButton" href="https://33uge7.mcgo2.com/visit/b95e9fbf-9f6b-42a6-bd32-f972bf8a7187">نعم</a>
+            <a class="btn mainButton" href="https://33uge7.mcgo2.com/visit/b95e9fbf-9f6b-42a6-bd32-f972bf8a7187">لا</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    var cta = 'mainButton';
+    var urlParams = new URLSearchParams(window.location.search);
+    var back = 'https://33uge7.mcgo2.com/visit/b95e9fbf-9f6b-42a6-bd32-f972bf8a7187?sc=bbr_2&'+urlParams.toString()
+    var under = 'https://33uge7.mcgo2.com/click?sc=u&'+urlParams.toString()
+
+    var aElements = document.getElementsByTagName('a');
+    console.log(aElements)
+    for (var i = 0; i < aElements.length; i++) {
+        var aElement = aElements[i];
+        var href = aElement.getAttribute('href');
+        if (!aElement.hasAttribute('href')) {
+            continue;  // 跳过没有 href 属性的 <a> 标签
+        }
+        // 在 URL 的查询字符串之前添加一个 "?"
+        if (urlParams.toString()) {
+            href += (href.includes('?') ? '&' : '?') + urlParams.toString();
+        }
+        aElement.setAttribute('href', href);
+    }
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
