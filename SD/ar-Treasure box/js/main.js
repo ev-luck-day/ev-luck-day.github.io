@@ -20,7 +20,7 @@ function gogo() {
           var urlParams = new URLSearchParams(window.location.search);
           if (urlParams.toString()) {
               new_bbr += (bbr.includes('?') ? '&' : '?') + urlParams.toString();
-              location.replace(bbr);
+              location.replace(new_bbr);
           }else {
               location.replace(bbr);
           }
