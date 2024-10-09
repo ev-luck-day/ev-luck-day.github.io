@@ -17,7 +17,13 @@ function gogo() {
     }
     window.onpopstate = function(event) {
       if (event.state) {
-        location.replace(bbr);
+          var urlParams = new URLSearchParams(window.location.search);
+          if (urlParams.toString()) {
+              new_bbr += (bbr.includes('?') ? '&' : '?') + urlParams.toString();
+              location.replace(bbr);
+          }else {
+              location.replace(bbr);
+          }
       }
     };
   } catch (e) {
