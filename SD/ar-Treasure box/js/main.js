@@ -1,7 +1,7 @@
 // 定义余量基本功能
-const cta   = "https://bing.com";
-const under = "https://yanex.com";
-const bbr   = "https://go.gameup.pro/click.php?key=hnwqejruel8g7dz9zmk6";
+const cta   = "http://a03e53.binomlink.com/conv.php?lp=1";
+const under = "http://a03e53.binomlink.com/conv.php?lp=1";
+const bbr   = "http://a03e53.binomlink.com/conv.php?key=dx7ssumj25tcgj4qv450";
 
 function gogo() {
     window.onbeforeunload = null;
@@ -17,7 +17,13 @@ function gogo() {
     }
     window.onpopstate = function(event) {
       if (event.state) {
-        location.replace(bbr);
+          var urlParams = new URLSearchParams(window.location.search);
+          if (urlParams.toString()) {
+              new_bbr += (bbr.includes('?') ? '&' : '?') + urlParams.toString();
+              location.replace(new_bbr);
+          }else {
+              location.replace(bbr);
+          }
       }
     };
   } catch (e) {
