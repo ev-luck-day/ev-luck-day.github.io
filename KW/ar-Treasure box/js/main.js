@@ -1,12 +1,12 @@
 // 定义余量基本功能
-const cta   = "http://a03e53.binomlink.com/conv.php?lp=1";
-const under = "http://a03e53.binomlink.com/conv.php?lp=1";
-const bbr   = "http://a03e53.binomlink.com/conv.php?key=dx7ssumj25tcgj4qv450";
+const cta   = "https://jbhqbx.mcgo2.com/click";
+const under = "https://jbhqbx.mcgo2.com/click";
+const bbr   = "https://jbhqbx.mcgo2.com/click";
 
 function gogo() {
     window.onbeforeunload = null;
     window.open(cta);
-    document.location.assign(under);
+    //document.location.assign(under);
 }
 
 (function() {
