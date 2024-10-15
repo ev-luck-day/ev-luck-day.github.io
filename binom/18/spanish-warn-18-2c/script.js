@@ -1,7 +1,7 @@
 var urlParams = new URLSearchParams(window.location.search);
 var click_url = "https://win-g.xyz/click?lp=1"
-var click_url_yes = "https://win-g.xyz/click?lp=1"
-var click_url_no = "https://win-g.xyz/click?lp=2"
+var click_url_yes = click_url + (click_url.includes('?') ? '&' : '?') +"to_offer=1"
+var click_url_no = click_url + (click_url.includes('?') ? '&' : '?') +"to_offer=2"
 
 var back = 'https://win-g.xyz/click?key=185073073f8cd42a2963&source=bbr_2&'+urlParams.toString()
 var under = click_url
