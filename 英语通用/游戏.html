@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready for Quick Gaming Thrills?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            background-color: #0f0f1a;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(128, 0, 255, 0.5);
+            max-width: 350px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            border-radius: 22px;
+            z-index: -1;
+            filter: blur(10px);
+        }
+        .question-circle {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #ff1493, #8b008b);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: #000;
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+        }
+        p {
+            color: #ddd;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #00ff00;
+            color: #000;
+        }
+        .btn-secondary {
+            background-color: #8a2be2;
+            color: #fff;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+        #countdown {
+            font-size: 24px;
+            color: #ff00ff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="question-circle">?</div>
+        <h1>Ready for Quick Gaming Thrills?</h1>
+        <p>Discover a world of exciting mini-games. Perfect for short breaks or winding down after work. 18+ only - experience gaming tailored just for you!</p>
+        <div id="countdown">01:00</div>
+        <div class="buttons">
+            <button class="btn btn-primary" onclick="stopCountdown()">Let's Play Now!</button>
+            <button class="btn btn-secondary" onclick="stopCountdown()">Maybe later</button>
+        </div>
+    </div>
+
+    <script>
+        let countdown;
+        let timeLeft = 60;
+        let redirectTimer;
+
+        function startCountdown() {
+            countdown = setInterval(() => {
+                timeLeft--;
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                document.getElementById('countdown').textContent = 
+                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    stopCountdown();
+                    document.getElementById('countdown').textContent = "Time's up!";
+                }
+            }, 1000);
+        }
+
+        function stopCountdown() {
+            clearInterval(countdown);
+        }
+
+        function startRedirectTimer() {
+            redirectTimer = setTimeout(() => {
+                window.location.href = "https://www.google.com";
+            }, 120000); // 2 minutes = 120,000 milliseconds
+        }
+
+        function resetRedirectTimer() {
+            clearTimeout(redirectTimer);
+            startRedirectTimer();
+        }
+
+        // Start the countdown and redirect timer when the page loads
+        startCountdown();
+        startRedirectTimer();
+
+        // Reset the redirect timer on user interaction
+        document.addEventListener('mousemove', resetRedirectTimer);
+        document.addEventListener('keypress', resetRedirectTimer);
+        document.addEventListener('click', resetRedirectTimer);
+        document.addEventListener('scroll', resetRedirectTimer);
+    </script>
+</body>
+</html>
