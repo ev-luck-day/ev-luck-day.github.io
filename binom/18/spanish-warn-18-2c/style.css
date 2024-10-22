@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #121212; /* خلفية داكنة */
+}
+
+/* الخلفية المتحركة */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%); /* تدرج دائري */
+    z-index: -1;
+    animation: pulse 5s infinite; /* تأثير النبض للخلفية */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.15); /* خلفية داخلية شبه شفافة */
+    padding: 40px 30px; /* حشو */
+    border-radius: 20px; /* زوايا ناعمة */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* ظل بارز */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* إطار واضح */
+}
+
+.warning {
+    font-size: 26px; /* حجم الخط */
+    color: #ffcc00; /* لون أصفر ساطع */
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px; /* حجم الخط */
+    color: #ffffff; /* لون أبيض */
+    margin-bottom: 20px;
+}
+
+.question {
+    font-size: 26px; /* زيادة حجم الخط */
+    color: #ff4500; /* لون برتقالي ساطع */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* تأثير ظل للنص */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around; /* توزيع الأزرار */
+    margin-top: 20px; /* مسافة بين السؤال والأزرار */
+}
+
+button {
+    padding: 15px 30px; /* حشو */
+    font-size: 15px; /* حجم الخط */
+    border-radius: 25px; /* زوايا ناعمة */
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease; /* تأثير انتقال سلس */
+    width: 160px; /* عرض محدد */
+}
+
+.yes-button {
+    background-color: #28a745; /* لون أخضر */
+    color: white;
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.5); /* ظل */
+}
+
+.no-button {
+    background-color: #dc3545; /* لون أحمر */
+    color: white;
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.5); /* ظل */
+}
+
+button:hover {
+    opacity: 0.9; /* تأثير تحويم */
+    transform: translateY(-3px); /* تحريك الزر للأعلى */
+}
+
+button:active {
+    transform: scale(0.95); /* تقليص الحجم عند النقر */
+}
+
+/* تصميم متجاوب للهواتف */
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column; /* تغيير ترتيب الأزرار */
+    }
+
+    button {
+        width: 100%; /* ملء العرض */
+        margin: 10px 0; /* مسافة بين الأزرار */
+    }
+
+    .question {
+        font-size: 20px; /* حجم الخط */
+    }
+
+    .warning, .description {
+        font-size: 14px; /* حجم الخط */
+    }
+}
