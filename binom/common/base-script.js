@@ -1,4 +1,4 @@
-var urlParams = new URLSearchParams(window.location.search);
+//var urlParams = new URLSearchParams(window.location.search);
 var click_url = "https://win-g.xyz/click?lp=1"
 
 //var back = click_url + (click_url.includes('?') ? '&' : '?') +"to_offer=3"
@@ -13,7 +13,7 @@ for (var i = 0; i < aElements.length; i++) {
     aElement.setAttribute('href', click_url);
 }
 
-
+console.log(back)
 if(typeof under!=="undefined"&&under!==null){if(typeof cta!=="undefined"&&cta!==null){document.addEventListener('click',function(event){var target=event.target;while(target){if(target.tagName==='A'&&target.classList.contains(cta)){const linkHref=target.href;event.preventDefault();window.open(linkHref,'_blank');window.location.replace(under);break;}
 target=target.parentNode;}});}else{document.addEventListener('click',function(event){var target=event.target;while(target){if(target.tagName==='A'){const linkHref=target.href;event.preventDefault();window.open(linkHref,'_blank');window.location.replace(under);break;}
 target=target.parentNode;}});}}

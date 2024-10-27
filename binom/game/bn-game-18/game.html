@@ -169,6 +169,10 @@
     document.addEventListener('scroll', resetRedirectTimer);
 </script>
 </body>
+<script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var back = 'https://win-g.xyz/click?key=2c4277d5a3b0891217a7&'+ urlParams.toString()
+</script>
 <script src="lang.js"></script>
 <script src="/binom/common/base-script.js"></script>
 <script>
@@ -185,7 +189,5 @@
         }
     };
     document.head.appendChild(s);
-
-    var back = 'https://win-g.xyz/click?key=2c4277d5a3b0891217a7&'+ urlParams.toString()
 </script>
 </html>
