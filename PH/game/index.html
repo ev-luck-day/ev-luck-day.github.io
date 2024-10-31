@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#999">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no">
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-touch-fullscreen" content="yes">
+<title>Update recommended!</title>
+<link href="main.css" rel="stylesheet" type="text/css">
+
+
+<style>
+#image {
+    width: auto; /* Change width to auto to maintain aspect ratio */
+    max-width: 100%; /* Ensure the image doesn't exceed its original size */
+    height: auto; /* Allow the height to adjust accordingly */
+    margin-top:  10px !important; /* Adjust the value as needed to add space */
+    display: block; /* Change display property to block */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    max-height: 100px; /* Set a maximum height if needed */
+}
+</style>
+
+
+
+<!-- HERE -->
+
+
+<style>
+body {
+    background-color: black !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.text {
+    text-align: center;
+    font-size: 18px;
+}
+
+#image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 100px;
+}
+
+.text .money-text {
+    color: #00A86B;
+}
+
+.heads .title {
+    text-align: center;
+    font-size: 24px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.button {
+    background-color: orange !important;
+    color: black !important;
+    text-decoration: none !important;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 5px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background-color: orange !important;
+    color: black !important;
+    text-decoration: none !important;
+    padding: 2vh 5vw; /* Adjust padding using vh and vw units */
+    margin: 5px;
+}
+
+
+
+
+</style>
+
+
+
+
+
+
+<script>
+    var sec = 31; // set the seconds
+    var min = 00; // set the minutes
+    function countDown() {
+        sec--;
+        if (sec == -01) {
+            sec = 59;
+            min = min - 1;
+        } else {
+            min = min;
+        }
+
+        if (sec <= 9) {
+            sec = "0" + sec;
+        }
+
+        time = (min <= 9 ? "" + min : min) + ":" + sec + "";
+
+        if (document.getElementById) {
+            document.getElementById('theTime').innerHTML = time;
+        }
+
+        SD = window.setTimeout(countDown, 1000);
+        if (min == '00' && sec == '00') {
+            sec = "00";
+            window.clearTimeout(SD);
+        }
+    }
+    window.onload = countDown;
+</script>
+
+
+</head>
+<body class="en">
+<div class="window text_wrap">
+    <div class="heads">
+
+
+    <!-- here -->
+        <div class="heads">
+            <div class="title"><b>Halloween Games!</b></div>
+            <!-- ... other content ... -->
+        </div>
+
+    </div>
+    <div class="text">
+    <img id="image" src="videogame_controller.png" alt="Image">
+    <p>
+      <br>You were<span class="money-text"> chosen </span> to receive a Halloween game gift!<b></br></br>Interested?</b>
+    </p>
+    <p style="text-align:center;margin-top:10px;"><span style="font-size:15px;color:red;font-family:sans-serif;" id="theTime">0:30</span><br><br></p>
+    </div>
+    <div class="buttons">
+        <a class="button cancel mainButton" style="font-weight: normal;" href="click_url_for_no_button">No</a>
+        <a class="button install mainButton"  href="click_url_for_yes_button">Yes</a>
+    </div>
+
+    </div>
+
+    <script>
+      var cta = 'mainButton';
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
