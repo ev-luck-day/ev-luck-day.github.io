@@ -1,5 +1,5 @@
 // 定义余量基本功能
-const cta   = "https://jbhqbx.mcgo2.com/click";
+const cta   = "https://jbhqbx.mcattr.com/click";
 //const under = "https://";
 const bbr   = "https://jbhqbx.mcattr.com/visit/2a5bba67-a35e-4ac1-bfeb-415af9c08b53";
 
