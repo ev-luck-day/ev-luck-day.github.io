@@ -1,5 +1,5 @@
 //var urlParams = new URLSearchParams(window.location.search);
-var click_url = "https://win-g.xyz/click?lp=1"
+var click_url = "https://33uge7.mcgo2.com/click"
 
 //var back = click_url + (click_url.includes('?') ? '&' : '?') +"to_offer=3"
 //var under = click_url + (click_url.includes('?') ? '&' : '?') +"to_offer=4"
