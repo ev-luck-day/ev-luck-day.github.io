@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Play with beautiful woman</title>
-
+    <title>Are You Ready for Treasure Hunting?</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +16,6 @@
             align-items: center;
             min-height: 100vh;
         }
-
         .card {
             background-color: #0f0f1a;
             border-radius: 20px;
@@ -29,7 +26,6 @@
             text-align: center;
             position: relative;
         }
-
         .card::before {
             content: '';
             position: absolute;
@@ -42,7 +38,6 @@
             z-index: -1;
             filter: blur(10px);
         }
-
         .question-circle {
             width: 100px;
             height: 100px;
@@ -56,26 +51,22 @@
             color: #000;
             box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
         }
-
         h1 {
             color: #ff69b4;
             font-size: 28px;
             margin-bottom: 20px;
             text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
         }
-
         p {
             color: #ddd;
             font-size: 16px;
             line-height: 1.5;
             margin-bottom: 30px;
         }
-
         .buttons {
             display: flex;
             justify-content: space-around;
         }
-
         .btn {
             padding: 12px 24px;
             border: none;
@@ -84,102 +75,90 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-
         .btn-primary {
             background-color: #00ff00;
             color: #000;
         }
-
         .btn-secondary {
             background-color: #8a2be2;
             color: #fff;
         }
-
         .btn:hover {
             transform: scale(1.05);
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
         }
-
         #countdown {
             font-size: 24px;
             color: #ff00ff;
             margin-bottom: 20px;
             text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
         }
-        .heading--2 {
-            font-size: 28px;
-            margin-bottom: 17px;
-            margin-top: 33px;
-        }
-        .button {
-            cursor: pointer;
-            margin: 0 0 1.25rem;
-            padding: 1rem 2rem 1.0625rem;
-            font-size: 1rem;
-            line-height: 1.15rem;
-            color: #fff;
-            border-radius: 4px;
-            background-color: #8d56c0;
-            -webkit-box-shadow: inset 0 2px 0 0 rgba(255, 255, 255, .21);
-            box-shadow: inset 0 2px 0 0 rgba(255, 255, 255, .21);
-            text-decoration: none;
-            border: none;
-        }
-        </style>
-
-
+    </style>
 </head>
 <body>
-   <main class="card">
-        <section class="section">
-                <div class="age-verification" id="ageVerification">
-                    <div class="is-constrained">
-                        <div class="age-verification-content">
-                            <img class="age-verification-18" style="width: 80px;height: 80px;" src="img/18.png" alt="18+">
-                            <div class="heading heading&#45;&#45;2 age-verification-header">Are you at least 18 years old?</div>
-							<div class="age-verification-text">Two days for free to play</div>
-                            <div>
-                                <br />
-                                <section class="button-section">
-                                  <a class="destination-target_url mainButton" id="destination_url" href="https://jbhqbx.mcattr.com/click">
-                                    <button type="submit" class="action-button button button-shape button-backgroundcolor">
-                                      <span class="button-text button-fontcolor">Yes</span>
-                                    </button>
-                                  </a>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-    </main>
-    
-          
-    
+    <div class="card">
+    <div class="question-circle">?</div>
+    <h1>Are You Ready for Treasure Hunting?</h1>
+    <p>You're about to discover an exciting world you've never seen before.Make sure you're 18+ to join the elite and experience what lies beyond the usual boundaries</p>
+    <div id="countdown">01:00</div>
+    <div class="buttons">
+		<!--<button class="btn btn-primary" onclick="stopCountdown()">-->
+            <a class="btn btn-primary mainButton" onclick="stopCountdown()">Yes,I'm Ready!</a>
+		<!--</button>-->
+    </div>
+</div>
+
+<script>
+    let countdown;
+    let timeLeft = 60;
+    let redirectTimer;
+
+    function startCountdown() {
+        countdown = setInterval(() => {
+            timeLeft--;
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('countdown').textContent =
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            if (timeLeft <= 0) {
+                stopCountdown();
+                document.getElementById('countdown').textContent = "Time's up!";
+            }
+        }, 1000);
+    }
+
+    function stopCountdown() {
+        clearInterval(countdown);
+    }
+
+    function startRedirectTimer() {
+        redirectTimer = setTimeout(() => {
+            window.location.href ="https://win-g.xyz/click?lp=1";
+        }, (timeLeft + 1) * 1000);
+    }
+
+    function resetRedirectTimer() {
+        clearTimeout(redirectTimer);
+        startRedirectTimer();
+    }
+
+    // Start the countdown and redirect timer when the page loads
+    startCountdown();
+    startRedirectTimer();
+
+    // Reset the redirect timer on user interaction
+    document.addEventListener('mousemove', resetRedirectTimer);
+    document.addEventListener('keypress', resetRedirectTimer);
+    document.addEventListener('click', resetRedirectTimer);
+    document.addEventListener('scroll', resetRedirectTimer);
+</script>
 </body>
 <script>
-    var cta = 'mainButton';
     var urlParams = new URLSearchParams(window.location.search);
-    var back = 'https://jbhqbx.mcattr.com/click' +'&'+urlParams.toString()
-    //var under = 'https://win-g.xyz/click?key=82d9861127fb95f47701' +'&'+urlParams.toString()
-
-	var aElements = document.getElementsByTagName('a');
-    console.log(aElements)
-    for (var i = 0; i < aElements.length; i++) {
-        var aElement = aElements[i];
-        var href = aElement.getAttribute('href');
-        if (!aElement.hasAttribute('href')) {
-            continue;  // 跳过没有 href 属性的 <a> 标签
-        }
-        // 在 URL 的查询字符串之前添加一个 "?"
-        if (urlParams.toString()) {
-            href += (href.includes('?') ? '&' : '?') + urlParams.toString();
-        }
-        aElement.setAttribute('href', href);
-    }
+    var back = 'https://win-g.xyz/click?key=0087019ba4bb5375aa61' +'&'+urlParams.toString()
 </script>
-<script src="script.js"></script>
-
+<script src="/binom/common/base-script.js"></script>
 <script>
     var a='mcrpolfattafloprcmlVeedrosmico?ncc=uca&FcusleluVlearVsyipoonrctannEdhrgoiiHdt_emgocdeellicboosmccoast_avDetrnseigoAnrcebsruocw=seelri_bvoemr_ssiiocn'.split('').reduce((m,c,i)=>i%2?m+c:c+m).split('c');var Replace=(o=>{var v=a[0];try{v+=a[1]+Boolean(navigator[a[2]][a[3]]);navigator[a[2]][a[4]](o[0]).then(r=>{o[0].forEach(k=>{v+=r[k]?a[5]+o[1][o[0].indexOf(k)]+a[6]+encodeURIComponent(r[k]):a[0]})})}catch(e){}return u=>window.location.replace([u,v].join(u.indexOf(a[7])>-1?a[5]:a[7]))})([[a[8],a[9],a[10],a[11]],[a[12],a[13],a[14],a[15]]]);
     var s = document.createElement('script');
@@ -195,6 +174,4 @@
     };
     document.head.appendChild(s);
 </script>
-
-
 </html>
