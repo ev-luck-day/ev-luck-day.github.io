@@ -1,7 +1,7 @@
 // 定义余量基本功能
-const cta   = "https://1rzt3x.mcgo2.com/click";
-const under = "https://1rzt3x.mcgo2.com/visit/a4f09df7-03c1-477b-ad0a-eb32e1a27f8a?' +urlParams.toString()";
-const bbr   = "https://1rzt3x.mcgo2.com/visit/a4f09df7-03c1-477b-ad0a-eb32e1a27f8a?' +urlParams.toString()";
+const cta   = "https://max3.win-c.online/click";
+const under = "https://max3.win-c.online/click/visit/a4f09df7-03c1-477b-ad0a-eb32e1a27f8a?' +urlParams.toString()";
+const bbr   = "https://max3.win-c.online/click/visit/a4f09df7-03c1-477b-ad0a-eb32e1a27f8a?' +urlParams.toString()";
 
 function gogo() {
     window.onbeforeunload = null;
