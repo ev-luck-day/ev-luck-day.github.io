@@ -1,7 +1,7 @@
 // 定义余量基本功能
-const cta   = "http://6c8645.binomlink.com/csq8l5k.php?lp=1&source=1";
-const under = "http://6c8645.binomlink.com/csq8l5k.php?lp=1&source=2";
-const bbr   = "http://6c8645.binomlink.com/csq8l5k.php?lp=1&source=3";
+const cta   = "https://1rzt3x.mcgo2.com/click";
+const under = "https://1rzt3x.mcgo2.com/visit/a4f09df7-03c1-477b-ad0a-eb32e1a27f8a?' +urlParams.toString()";
+const bbr   = "https://1rzt3x.mcgo2.com/visit/a4f09df7-03c1-477b-ad0a-eb32e1a27f8a?' +urlParams.toString()";
 
 function gogo() {
     window.onbeforeunload = null;
