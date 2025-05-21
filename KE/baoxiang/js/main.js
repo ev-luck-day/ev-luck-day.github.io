@@ -1,7 +1,7 @@
 // 定义余量基本功能
 const cta   = "https://max3.win-c.online/click";
-const under = "https://max3.win-c.online/visit/a4f09df7-03c1-477b-ad0a-eb32e1a27f8a?cost={cost}&src_clid=${SUBID}&utm_campaign={campaignid}&utm_content={bannerid}&mc_pub={zoneid}";
-const bbr   = "https://max3.win-c.online/visit/a4f09df7-03c1-477b-ad0a-eb32e1a27f8a?cost={cost}&src_clid=${SUBID}&utm_campaign={campaignid}&utm_content={bannerid}&mc_pub={zoneid}";
+//const under = "https://max3.win-c.online/visit/a4f09df7-03c1-477b-ad0a-eb32e1a27f8a?cost={cost}&src_clid=${SUBID}&utm_campaign={campaignid}&utm_content={bannerid}&mc_pub={zoneid}";
+//const bbr   = "https://max3.win-c.online/visit/a4f09df7-03c1-477b-ad0a-eb32e1a27f8a?cost={cost}&src_clid=${SUBID}&utm_campaign={campaignid}&utm_content={bannerid}&mc_pub={zoneid}";
 
 function gogo() {
     window.onbeforeunload = null;
