@@ -1,0 +1,156 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save on Auto Insurance - Get Your Best Rate!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .quiz-container {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col items-center justify-center px-4 py-8 bg-gradient-to-b from-blue-500 to-blue-700">
+        <!-- Header Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Save Up to $529/Year on Auto Insurance!</h1>
+            <p class="text-lg md:text-xl text-white mb-6">Take this 2-minute quiz to qualify for the New Safe Driver Savings Program.</p>
+            <p class="text-sm text-yellow-300 font-semibold">Helped Over 17 Million Americans – Limited Spots Available!</p>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz-container" class="quiz-container bg-white rounded-lg shadow-lg p-6 md:p-8 w-full max-w-md">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Get Started – It’s Free!</h2>
+            <div id="question-1" class="question">
+                <p class="text-lg font-medium mb-4 text-center">Are you currently insured?</p>
+                <div class="flex justify-center space-x-4">
+                    <button onclick="answerQuestion('insured', 'yes')" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Yes</button>
+                    <button onclick="answerQuestion('insured', 'no')" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">No</button>
+                </div>
+            </div>
+            <div id="question-2" class="question hidden">
+                <p class="text-lg font-medium mb-4">Are you a homeowner?</p>
+                <div class="flex justify-center space-x-4">
+                    <button onclick="answerQuestion('homeowner', 'yes')" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Yes</button>
+                    <button onclick="answerQuestion('homeowner', 'no')" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">No</button>
+                </div>
+            </div>
+            <div id="result" class="hidden text-center">
+                <p class="text-lg font-semibold text-green-600 mb-4">Great! You may qualify for huge savings!</p>
+                <a id="cta-button" href="#" class="bg-yellow-500 text-gray-800 px-8 py-3 rounded-lg font-bold hover:bg-yellow-600">Get Your Quote Now!</a>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="mt-12 w-full max-w-3xl">
+            <h2 class="text-2xl font-bold text-white text-center mb-6">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg p-6 shadow">
+                    <p class="text-gray-600 italic">"I went from $217/month to $67 with full coverage! The agent was clear and honest. Call now!"</p>
+                    <p class="mt-4 font-semibold text-gray-800">Sarah A. Smythe – Dallas, TX</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow">
+                    <p class="text-gray-600 italic">"Saved over $150/month without changing coverage. Quick, easy, and no pressure!"</p>
+                    <p class="mt-4 font-semibold text-gray-800">Peter J. Lewis – Miami, FL</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow">
+                    <p class="text-gray-600 italic">"I waited too long, but they cut my premium in half. Don’t wait – do it now!"</p>
+                    <p class="mt-4 font-semibold text-gray-800">Flossie R. Brown</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer CTA -->
+        <div class="mt-12 text-center">
+            <p class="text-white text-lg mb-4">Don’t miss out on savings – only a few spots left!</p>
+            <a id="footer-cta" href="#" class="bg-yellow-500 text-gray-800 px-8 py-3 rounded-lg font-bold hover:bg-yellow-600">Get Your Free Quote Today!</a>
+        </div>
+    </div>
+
+    <script>
+        // Base URL and UTM parameters
+        const baseUrl = "https://coverage.com";
+        const utmParams = {
+            utm_campaign: "{{campaign.name}}",
+            utm_source: "{{site_source_name}}",
+            utm_medium: "{{placement}}",
+            campaign_id: "{{campaign.id}}",
+            adset_id: "{{adset.id}}",
+            ad_id: "{{ad.id}}",
+            utm_term: "{{adset.name}}",
+            utm_content: "{{ad.name}}",
+            pixel: "3122626467914608",
+            mksite: "1119",
+            mkcampaign: "323797",
+            phone: "8448330107"
+        };
+
+        // Build URL with UTM parameters
+        function buildUrl() {
+            const params = new URLSearchParams(utmParams).toString();
+            return `${baseUrl}?${params}`;
+        }
+
+        // Update CTA links
+        document.getElementById("cta-button").href = buildUrl();
+        document.getElementById("footer-cta").href = buildUrl();
+
+        // Quiz logic
+        let currentQuestion = 1;
+        function answerQuestion(type, value) {
+            if (type === "insured") {
+                document.getElementById("question-1").classList.add("hidden");
+                document.getElementById("question-2").classList.remove("hidden");
+                currentQuestion = 2;
+            } else if (type === "homeowner") {
+                document.getElementById("question-2").classList.add("hidden");
+                document.getElementById("result").classList.remove("hidden");
+            }
+        }
+    </script>
+</body>
+</html>
